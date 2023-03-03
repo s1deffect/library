@@ -1,0 +1,65 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+.card {
+    border: 10px solid red;
+    border-radius: 10px;
+    width: fit-content;
+    padding: 20px;
+
+}
+.header {
+    background-color: antiquewhite;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    padding: ;
+}
+.logo {
+    font-size: 60px;
+    
+}
+ul {
+    list-style: none;
+    display: flex;
+    gap : 20px;
+    flex-direction: row;
+}
+li button {
+    padding: 15px;
+    border: 5px solid grey;
+    border-radius: 3px;width: 150px;
+    
+}
+.add-book {
+    background-color: rgba(55, 115, 228, 0.349);
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+.add-book button {
+    width: 200px;
+    padding: 20px;
+    border: 5px solid grey;
+    border-radius: 10px;
+}
+
+.main {
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+/* 
+styling the form
+*/
+form {
+    /* display: none; */
+    /* margin: 50%; */
+}

@@ -71,28 +71,42 @@ function Book(title,author, pages, statue) {
 }
 const book1 = new Book("game of thrones", "martin luther", 101, "read")
 myLibraary.push(book1)
-console.log(myLibraary)
+const book2 = new Book("fifty shades of grey", " ahmed ashraf", 200, "read")
+myLibraary.push(book2)
+// console.log(myLibraary)
 
 
 
-function addBookToLibrary() {
-    myLibraary.push(this)
-}
+// function addBookToLibrary() {
+//     myLibraary.push(this)
+// }
 
 function creatCard(book) {
-    const card = document.createElement('div')
-    const title = document.createElement('h1')
-    title.textContent= this.title
-    const author = document.createElement('h2')
-    author.textContent = this.author
-    const pages = document.createElement('div')
-    pages.textContent = this.pages
+    const card = document.createElement('div');
+    card.className = "card";
 
+    const title = document.createElement('h1');
+    title.textContent= book.title;
+    card.appendChild(title);
+
+    const author = document.createElement('h2');
+    author.textContent = book.author;
+    card.appendChild(author);
+
+    const pages = document.createElement('div');
+    pages.textContent = book.pages;
+    card.appendChild(pages);
+    const page = document.querySelector('.main');
+    console.log(page);
+
+    page.appendChild(card);
 }
 
 //display book on the page
 function displayBook() {
-    for (book in myLibraary) {  
+    for (book of myLibraary) {  
+        console.log(book);
         creatCard(book);
     }
 }
+// displayBook()
