@@ -8,10 +8,14 @@
 
 
 .card {
-    border: 10px solid red;
+    border: 10px solid rgb(179, 107, 14);
     border-radius: 10px;
     width: fit-content;
     padding: 20px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 
 }
 .header {
@@ -32,9 +36,12 @@ ul {
     flex-direction: row;
 }
 li button {
+    width: 200px;
+    font-size: 20px;
+    font-weight: 600;
     padding: 15px;
     border: 5px solid grey;
-    border-radius: 3px;width: 150px;
+    border-radius: 30px;
     
 }
 .add-book {
@@ -44,10 +51,12 @@ li button {
     padding: 20px;
 }
 .add-book button {
-    width: 200px;
+    width: fit-content;
     padding: 20px;
     border: 5px solid grey;
-    border-radius: 10px;
+    border-radius: 50px;
+    font-size: 30px;
+    font-weight: 600;
 }
 
 .main {
