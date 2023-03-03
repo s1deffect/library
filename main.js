@@ -71,8 +71,8 @@ function Book(title,author, pages, statue) {
 }
 // myLibraary.push(Book("game of thrones", "martin luther", 101, "read")) 
 // myLibraary.push(book1)
-const book2 = new Book("fifty shades of grey", " ahmed ashraf", 200, "read")
-myLibraary.push(book2)
+// const book2 = new Book("fifty shades of grey", " ahmed ashraf", 200, "read")
+// myLibraary.push(book2)
 // console.log(myLibraary)
 
 
@@ -97,12 +97,20 @@ function creatCard(book) {
     pages.textContent = book.pages;
     card.appendChild(pages);
     const page = document.querySelector('.main');
+    const removeBut = document.createElement('button')
+    removeBut.textContent="remove book";
+    removeBut.setAttribute("class","remove-but");
+    card.appendChild(removeBut)
 
     page.appendChild(card);
 }
 
 //display book on the page
 function displayBook() {
+    const page = document.querySelector('.main');
+    while (page.firstChild) {
+        page.firstChild.remove();
+    }
     for (book of myLibraary) {  
         creatCard(book);
     }
@@ -115,13 +123,14 @@ document.querySelector('.form').addEventListener('submit', (e) => {
     const author = document.getElementById('author').value;
     const pages = document.getElementById('pages').value;
     const statue = 'read';
-    let bookItem = new Book(title, author, pages,statue);
+    const bookItem = new Book(title, author, pages,statue);
     addBookToLibrary(bookItem);
-    // displayBook()
+    displayBook()
     // console.log(bookItem)
     
     
 })
 console.log(myLibraary);
-displayBook();
+// displayBook();
 
+displayBook()
