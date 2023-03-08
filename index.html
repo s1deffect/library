@@ -19,28 +19,31 @@
         </div>
     </div>
     <div class="add-book">
-        <button>+ Add Book </button>
+        <button class="show-form">+ Add Book </button>
+    </div>
+    <div class="form-container">
+        <div class="form">
+            <form action="" class="form">
+                <div> <h1>add a new book</h1></div>
+                <div>
+                    <input type="text" required placeholder="Title" id="title">
+                </div>
+                <div>
+                    <input type="text" required placeholder="Author" id="author">
+                </div>
+                <div>
+                    <input type="number" required placeholder="number of pages" id="pages">
+                </div>
+                <div>
+                    <button type="submit" class='submit'>add book</button>
+                </div>
+            </form>
+        </div>
+
     </div>
 
     <div class="main"></div>
 
-    <div class="form">
-        <form action="" class="form">
-            <div> <h1>add a new book</h1></div>
-            <div>
-                <input type="text" required placeholder="Title" id="title">
-            </div>
-            <div>
-                <input type="text" required placeholder="Author" id="author">
-            </div>
-            <div>
-                <input type="number" required placeholder="number of pages" id="pages">
-            </div>
-            <div>
-                <button type="submit" class='submit'>add book</button>
-            </div>
-        </form>
-    </div>
     <script src="main.js"></script>
 </body>
 </html>

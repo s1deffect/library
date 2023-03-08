@@ -98,8 +98,9 @@ function creatCard(book) {
     card.appendChild(pages);
     const page = document.querySelector('.main');
     const removeBut = document.createElement('button')
-    removeBut.textContent="remove book";
+    removeBut.textContent = "remove book";
     removeBut.setAttribute("class","remove-but");
+    removeBut.dataset.index = myLibraary.length-1
     card.appendChild(removeBut)
 
     page.appendChild(card);
@@ -126,6 +127,7 @@ document.querySelector('.form').addEventListener('submit', (e) => {
     const bookItem = new Book(title, author, pages,statue);
     addBookToLibrary(bookItem);
     displayBook()
+    document.querySelector('form').style.display = "none" ;
     // console.log(bookItem)
     
     
@@ -134,3 +136,15 @@ console.log(myLibraary);
 // displayBook();
 
 displayBook()
+
+document.querySelector('.show-form').addEventListener('click',(e) => {
+    console.log('working');
+    document.querySelector('form').style.display = "flex" ;
+})
+
+
+// document.querySelector('.remove-but').addEventListener('click', (e) => {
+//     console.log("working")
+//     console.log(e.target.dataset.index)
+//     // delete myLibraary [e.target.dataset.index]
+// })
